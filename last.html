@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Pilihan Hadiah</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:#0d0d0d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Libre Baskerville', serif;
+}
+
+/* BIG CARD */
+.big-card{
+    background:#f6f1e7;
+    border:2px solid #7a1f1f;
+    box-shadow:0 0 60px rgba(0,0,0,0.8);
+    padding:50px;
+    max-width:900px;
+    width:100%;
+    text-align:center;
+}
+
+/* TITLE */
+.big-title{
+    font-family:'Playfair Display', serif;
+    font-size:30px;
+    letter-spacing:2px;
+    color:#7a1f1f;
+    margin-bottom:10px;
+}
+
+.big-subtitle{
+    font-size:13px;
+    letter-spacing:1px;
+    color:#777;
+    margin-bottom:40px;
+}
+
+/* WRAP 2 CARD */
+.card-wrap{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+/* SMALL CARD */
+.card{
+    background:#fff;
+    width:280px;
+    padding:20px;
+    border:1.5px solid #7a1f1f;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-size:16px;
+    margin-bottom:15px;
+    color:#7a1f1f;
+}
+
+.claim-btn{
+    padding:10px 20px;
+    background:#7a1f1f;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    font-size:13px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.claim-btn:hover{
+    background:#5c1616;
+}
+.back-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#7a1f1f;
+    color:#fff;
+    padding:10px 22px;
+    font-size:13px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#5c1616;
+    transform:translateY(-2px);
+}
+.code{
+    background:#0d0d0d;
+    color:#f6f1e7;
+    padding:8px 12px;
+    letter-spacing:2px;
+    font-size:13px;
+}
+
+@media(max-width:768px){
+    .card-wrap{
+        flex-direction:column;
+        gap:25px;
+    }
+
+    .big-card{
+        padding:30px 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="big-card">
+
+    <!-- JUDUL -->
+    <div class="big-title">PILIH HADIAH KAMU</div>
+    <div class="big-subtitle">MAAF YA KALAU HADIAHNYA BIASA AJA HIHIHI</div>
+
+    <!-- 2 CARD -->
+    <div class="card-wrap">
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <img src="asset/7.jpeg" alt="Hadiah 1">
+            <h3>Hadiah Pertama</h3>
+            <button class="claim-btn" onclick="claim(this,'GJHD3X8QPUA9')">CLAIM</button>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <img src="asset/8.jpeg" alt="Hadiah 2">
+            <h3>Hadiah Kedua</h3>
+            <button class="claim-btn" onclick="claim(this,'W2GEUAL9WG6Y')">CLAIM</button>
+        </div>
+
+    </div>
+<BR><br>
+    <!-- BACK BUTTON -->
+    <div class="back-wrap">
+        <a href="index.html" class="back-btn">KEMBALI</a>
+    </div>
+
+</div>
+
+<script>
+    
+function claim(btn, code){
+    btn.outerHTML = `<div class=\"code\">${code}</div>`;
+}
+</script>
+
+</body>
+</html>
