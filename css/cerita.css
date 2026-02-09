@@ -1,0 +1,106 @@
+/* css/story.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* BACKGROUND HITAM */
+.bg{
+    min-height:100vh;
+    background:#0d0d0d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 15px;
+}
+
+/* CARD CREAM */
+.story-card{
+    background:#f6f1e7;
+    max-width:820px;
+    width:100%;
+    padding:45px;
+    border:2px solid #7a1f1f;
+    box-shadow:0 0 50px rgba(0,0,0,0.7);
+    text-align:center;
+}
+
+/* IMAGE */
+.image-box{
+    border:2px solid #7a1f1f;
+    margin-bottom:30px;
+}
+
+.image-box img{
+    width:100%;
+    display:block;
+}
+
+/* TITLE */
+.story-title{
+    font-family: 'Playfair Display', serif;
+    font-size:28px;
+    letter-spacing:2px;
+    color:#7a1f1f;
+    margin-bottom:8px;
+}
+
+/* DATE */
+.story-date{
+    font-size:12px;
+    letter-spacing:1px;
+    color:#999;
+    margin-bottom:25px;
+}
+
+/* TEXT */
+.story-text{
+    font-size:16px;
+    line-height:1.9;
+    letter-spacing:0.3px;
+    color:#2b2b2b;
+    margin-bottom:15px;
+}
+
+/* BUTTON */
+.btn-wrap{
+    margin-top:30px;
+}
+
+.back-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#7a1f1f;
+    color:#fff;
+    padding:10px 22px;
+    font-size:13px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#5c1616;
+    transform:translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .story-card{
+        padding:30px 20px;
+    }
+
+    .story-title{
+        font-size:24px;
+    }
+
+    .story-text{
+        font-size:15px;
+        line-height:1.8;
+    }
+}
