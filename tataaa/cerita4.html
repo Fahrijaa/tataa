@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>I LOVE U TATAA</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/cerita.css">
+</head>
+<body>
+    <audio id="music" src="asset/musik.mp3"></audio>
+<div class="bg">S
+    <div class="story-card">
+
+        <!-- IMAGE -->
+        <div class="image-box">
+            <img src="asset/4.jpeg" alt="Awal Segalanya">
+        </div>
+
+        <!-- TITLE -->
+        <h1 class="story-title">PERMATA CINTA ARYU 🤍</h1>
+        <div class="story-date"></div>
+
+        <!-- TEXT -->
+        <p class="story-text">
+            Pai nggak tau nanti kita bakal sejauh apa,
+            tapi pai tau pai mau jalaninnya pelan-pelan sama tataa.
+            Bukan buat buru-buru, tapi buat serius.
+        </p>
+
+        <p class="story-text">
+        Bukan buat main-main, tapi buat dijaga.
+        aku pengen hubungan ini punya arah, bukan cuma rasa.
+        kitaa jalaninn bareng bareng yaa bibuuu 🤍
+        </p>
+
+        <!-- BUTTON -->
+        <div class="btn-wrap">
+            <a href="last.html" class="back-btn">LANJUT</a>
+        </div>
+
+    </div>
+</div>
+<script>
+const music = document.getElementById('music');
+
+/* LOAD STATE */
+window.addEventListener('load', () => {
+    const isPlaying = localStorage.getItem('music_playing');
+    const musicTime = localStorage.getItem('music_time');
+
+    if(musicTime){
+        music.currentTime = parseFloat(musicTime);
+    }
+
+    if(isPlaying === 'true'){
+        music.play();
+    }
+});
+
+/* SAVE TIME */
+setInterval(() => {
+    if(!music.paused){
+        localStorage.setItem('music_time', music.currentTime);
+    }
+}, 500);
+</script>
+
+</body>
+</html>
